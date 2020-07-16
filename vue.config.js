@@ -18,6 +18,10 @@ module.exports = {
 				target: 'http://localhost:8092',
 				ws: true,
 				changeOrigin: true
+			},'/asset':{
+				target: 'http://localhost:8092',
+				ws: true,
+				changeOrigin: true
 			}
         }
     }
