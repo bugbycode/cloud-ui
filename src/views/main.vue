@@ -4,10 +4,10 @@
             <el-col :span="24"><app-header></app-header></el-col>
         </el-row>
         <el-row>
-        <el-col :span="4">
+        <el-col :span="3">
             <app-left></app-left>
         </el-col>
-        <el-col :span="20">
+        <el-col :span="21">
             <div class="mainPage">
             <router-view></router-view>
             </div>

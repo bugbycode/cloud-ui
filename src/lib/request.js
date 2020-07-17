@@ -119,8 +119,15 @@ export default {
 			// 当请求开始, 自动设置loading状态
 			!ignoreLoading && (this.loading = true);
 
-			return axios.request(config).then((response) => {
+			const loading = this.$loading({
+				lock: true,
+				text: 'Loading',
+				spinner: 'el-icon-loading',
+				background: 'rgba(0, 0, 0, 0.7)'
+			});
 
+			return axios.request(config).then((response) => {
+				loading.close();
 				// 当请求成功, 自动设置loading状态
 				!ignoreLoading && (this.loading = false);
 
@@ -163,6 +170,7 @@ export default {
 				return parseStatusCode(this, response, response.status,url);
 
 			}).catch((response) => {
+				loading.close();
 				// 当请求报错, 自动设置loading状态
 				!ignoreLoading && (this.loading = false);
 

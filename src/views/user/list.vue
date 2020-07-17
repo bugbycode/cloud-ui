@@ -1,6 +1,9 @@
 <template>
     <div>
         <el-card class="box-card">
+            <div slot="header" class="clearfix">
+                <span>用户列表</span>
+            </div>
             <el-row>
                 <el-col :span="6">
                     <el-input class="searchText"

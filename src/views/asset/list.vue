@@ -1,6 +1,9 @@
 <template>
 	<div>
 		<el-card class="box-card">
+            <div slot="header" class="clearfix">
+                <span>设备列表</span>
+            </div>
             <el-row>
                 <el-col :span="6">
                     <el-input class="searchText"
@@ -58,7 +61,7 @@
                         width="100">
                         <template slot-scope="scope">
                             <el-button @click="showEdit(scope.row.id)" type="text" size="small">编辑</el-button>
-                            <el-button @click="delUser(scope.row.id)" type="text" size="small">删除</el-button>
+                            <el-button @click="delAsset(scope.row.id)" type="text" size="small">删除</el-button>
                         </template>
                         </el-table-column>
                     </el-table>
@@ -123,9 +126,9 @@ export default {
             var offset = val * this.page.pageSize - this.page.pageSize;
             this.page.startIndex = offset;
             this.query(this.input1,this.page.startIndex,this.page.pageSize);
-        },delUser(val){
+        },delAsset(val){
             let vue = this;
-            vue.$post('/user/user/deleteById',{
+            vue.$post('/asset/asset/deleteById',{
                 params:{
                     id:val
                 }
