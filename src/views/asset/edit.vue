@@ -285,8 +285,11 @@ export default {
                     label:'SSH',
                     value:0,
                 },{
-                    label:'RDP',
+                    label:'SFTP',
                     value:1,
+                },{
+                    label:'RDP',
+                    value:2,
                 },
             ],proStatusOptions:[
                 {

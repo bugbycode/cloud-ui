@@ -23,6 +23,17 @@
                 <span slot="title">设备信息</span>
             </el-menu-item>
         </el-menu>
+        <el-menu
+            default-active="2"
+            class="el-menu-vertical-demo"
+            active-text-color="#545c64"
+            @open="handleOpen"
+            @close="handleClose">
+            <el-menu-item index="2"  @click="toRouter('ruleList')">
+                <i class="el-icon-lock"></i>
+                <span slot="title">运维授权</span>
+            </el-menu-item>
+        </el-menu>
       </el-card>
     </div>
 </template>

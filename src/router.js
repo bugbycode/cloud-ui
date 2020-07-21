@@ -12,6 +12,8 @@ const editUser = resolve => require(['@/views/user/edit.vue'], resolve);
 const assetList = resolve => require(['@/views/asset/list.vue'], resolve);
 const assetEdit = resolve => require(['@/views/asset/edit.vue'], resolve);
 
+const ruleList = resolve => require(['@/views/rule/list.vue'], resolve);
+
 const router = new Router({
 	// base:'/seap/',
 	routes: [
@@ -35,6 +37,8 @@ const router = new Router({
 					path: 'assetList',name:'assetList',component:assetList
 				},{
 					path:'assetEdit',name:'assetEdit',component:assetEdit
+				},{
+					path:'ruleList',name:'ruleList',component:ruleList
 				}
 			]
 		}

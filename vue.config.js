@@ -22,6 +22,10 @@ module.exports = {
 				target: 'http://localhost:8092',
 				ws: true,
 				changeOrigin: true
+			},'/rule':{
+				target: 'http://localhost:8092',
+				ws: true,
+				changeOrigin: true
 			}
         }
     }
