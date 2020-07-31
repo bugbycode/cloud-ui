@@ -43,6 +43,10 @@
                         prop="osVersion"
                         label="操作系统">
                         </el-table-column>
+						<el-table-column
+                        prop="account"
+                        label="设备账号">
+                        </el-table-column>
                         <el-table-column
                         label="协议">
                             <template slot-scope="scope">
